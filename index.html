@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Pixelify Sans', sans-serif;
+      
+      overflow-x: hidden;
+background-image: url('https://images.unsplash.com/photo-1638272181967-7d3772a91265?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHVycGxlJTIwYWJzdHJhY3R8ZW58MHx8MHx8fDA%3D');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      text-shadow: 0 0 12px #a020f0;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+h3 {
+color: 8a00c4;
+}
+
+    .tab-buttons {
+      text-align: center;
+      margin: 30px 0;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .tab-buttons button {
+      background-color: #000;
+      color: #a020f0;
+      border: 2px solid #a020f0;
+      padding: 12px 24px;
+      margin: 0 10px 10px 10px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #a020f0;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .tab-buttons button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #a020f0;
+    }
+
+    .tab-buttons button.active {
+      background-color: #111;
+      color: #a020f0;
+      border: 2px solid #a020f0;
+      box-shadow: 0 0 15px #a020f0;
+    }
+
+    .tab-content-container > div {
+      padding: 40px;
+      display: none;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Games grid */
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .game-card {
+      background-color: #111;
+      border: 2px solid #a020f0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px #a020f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #a020f0;
+    }
+
+    .game-card a {
+      color: #a020f0;
+      text-decoration: none;
+      font-size: 1.1em;
+      text-shadow: 0 0 5px #a020f0;
+    }
+
+    /* Custom purple scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #a020f0;
+      border-radius: 6px;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px #a020f0;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #b84ef7;
+      box-shadow: 0 0 15px #a020f0;
+    }
+    .home-title:hover {
+            transform: scale(1.05);
+      box-shadow: 0 0 25px purple;
+    }
+  </style>
+</head>
+<body>
+  <span class="home-title"><h1>Magenta</h1></span>
+
+  <div class="tab-buttons">
+    <button onclick="openTab(event, 'Tab1Content')">Home</button>
+    <button onclick="openTab(event, 'Tab2Content')">Games</button>
+  </div>
+
+  <div class="tab-content-container">
+    <!-- Home -->
+    <div id="Tab1Content">
+      <h3>This is my site feel free to share it📎</h3>
+    </div>
+
+    <!-- Games -->
+    <div id="Tab2Content">
+  <div class="game-grid">
+    <!-- Original 10 -->
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/10min">10 Minutes Till Dawn</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/3slices">3 Slices 2</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/60secburger">60 Seconds Burger Run</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/99balls">99 Balls</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/adofai">A Dance of Fire and Ice</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/aliensky">Alien Sky Invasion</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/amaze">Amazing Maze</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/angrybird">Angry Birds</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/archerworldtour">Archery World Tour</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/smallworldcup">ASmall World Cup</a></div>
+
+    <!-- New 18 -->
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/awesometanks2">Awesome Tanks 2</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/baconmaydie">Bacon May Die</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/bitlife">BitLife</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/bloons">Bloons</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/bloxors">Bloxorz</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/crossyroad">Crossy Road</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/coreball">Core Ball</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/cattle3d">Crazy Cattle 3D</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/curveball">Curveball</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/drifthunters">Drift Hunters</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/driftboss">Drift Boss</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/drivemad">Drive Mad</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/effingworms">Effing Worms</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/flappybird">Flappy Dunk</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/googlebaseball">Google Baseball</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/gorescript">Gorescript Classic</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/googledino">Google Dino</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/oneboss">Just One Boss</a></div>
+    <div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/sandstone">Sandstone</a></div>
+<div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/run3">Run 3</a></div>
+<div class="game-card"><a href="https://sites.google.com/view/mag3nt4/games/snowrider">Snowrider 3D</a></div>
+  </div>
+<style>
+body {
+background-image: url('https://images.unsplash.com/photo-1638272181967-7d3772a91265?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHVycGxlJTIwYWJzdHJhY3R8ZW58MHx8MHx8fDA%3D');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+    </div>
+
+    <!-- Groupchat -->
+    <div id="Tab3Content">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proxy Launcher</title>
+  <style>
+    body {
+      background: #1a001a;
+      color: #c77dff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 10%;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 24px;
+      background: #2d003d;
+      border: 2px solid #c77dff;
+      border-radius: 6px;
+      color: #c77dff;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #c77dff;
+      color: #1a001a;
+      box-shadow: 0 0 12px #c77dff;
+    }
+  </style>
+</head>
+<body>
+  
+  <script>
+    document.getElementById("openProxy").onclick = () => {
+      window.open(
+        "/active/",
+        "ProxyWindow",
+        "width=1000,height=700,resizable=yes,scrollbars=yes,status=no"
+      );
+    };
+  </script>
+</body>
+</html>
+  </div>
+
+  <script>
+    const modal = document.getElementById("proxyModal");
+    const btn = document.getElementById("openProxy");
+    const span = document.querySelector(".close");
+
+    btn.onclick = () => {
+      modal.style.display = "block";
+    };
+    span.onclick = () => {
+      modal.style.display = "none";
+    };
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
+    </div>
+  </div>
+
+  <script>
+    function openTab(event, tabName) {
+      const tabContent = document.getElementsByClassName("tab-content-container")[0].children;
+      for (let i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+
+      const tabButtons = document.getElementsByClassName("tab-buttons")[0].children;
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).style.display = "block";
+      event.currentTarget.classList.add("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector(".tab-buttons button").click();
+    });
+  </script>
+</body>
+</html>
